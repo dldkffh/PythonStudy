@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>Page Title</title>
+	<style>
+    	body {margin : 10px
+        		font-size : 15px;}
+        
+        #em1 {font-size : 1em}
+        #em2 {font-size : 1.5em;} 
+        #em3 {font-size : 2em;}
+                
+        #container {
+        	background-color: #f0f0f0;
+            width:100%;
+            }
+        
+        .header { 
+        	background-color: #908886;
+            height:45px;
+        }
+        #side {
+        	background-color: #fff555;
+            width:20%;
+            height:720px;
+            float:left;
+        }
+        #content {
+        	background-color: #dccad9;
+            width:80%;
+            height:720px;
+            float:left;
+        }
+        #footer {
+        	background-color: #555555;
+            height:85px;
+            clear:both; /*자기자리 유지*/
+            color : white;
+            border : 2px solid yellow;
+        }
+        
+        .testtr ~ tr {color : #aaaaaa;} 
+        /*'+' : 근접에 있는것, '~' : 계열 형제 모두 '>' : 하위 자손*/
+        
+        table {
+        	border-style : dotted;
+            border-color : #ff0000;
+            border-width : 10px;
+        }
+        
+        #box {
+        	background-color: red;
+            height:200px;
+            width:150px;
+            margin: 10px 0 0 10px;
+        }
+        #box2 {
+        	background-color: blue;
+            height:200px;
+            width:150px;
+            margin: 10px 0 0 160px;
+        }
+        #box3 {
+        	background-color: green;
+            height:200px;
+            width:150px;
+            margin: 10px 0 0 310px;
+        }
+        #box4 {
+        	background-color: yellow;
+            height:200px;
+            width:150px;
+            margin: 10px 0 0 460px;
+        }
+        
+	</style>
+	</head>
+	
+    <body>
+		<div id ='container'>
+		<div class='header'>header</div> <!--classs는 .을 써서 표현-->
+        <div id='side'>side</div> <!--id는 #을 써서 표현, 한개만 존재-->
+        <div id='content'>content
+        	<span>hello_px</span><br> <!--폰트같은 경우 px보단 em을-->
+        		<span id = "em1">hello_1em</span><br>
+                <span id = "em2">hello_1.5em</span><br>
+                <span id = "em3">hello_2em</span><br>
+            </div>
+        <div id='footer'>footer</div>
+        
+        <!--주석-->
+        
+		<br>
+        <table border=5 width='300px' height='200' align='center'>
+            <tr align = 'center' class='testtr'>
+                <td colspan=3>설재민</td>
+                <td>김보민</td>
+            </tr>
+
+            <tr align='center'>
+                <td rowspan=2 colspan=3>정혜진</td>
+                <td>박상원</td>
+
+            </tr>
+
+            <tr align='center'>
+                <td>이재경</td>
+            </tr>
+        </table>
+        <br><br>
+        
+        <div id="box"></div>
+        <div id="box2"></div>
+        <div id="box3"></div>
+        <div id="box4"></div>
+        
+        
+	</body>
+</html>

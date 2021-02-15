@@ -1,0 +1,85 @@
+var <- 3
+var2 <- var <-5
+
+3 -> var
+vec <- c(1, 2, 3, 4, 5) #num(실수포함)
+vec <- 1:7 #int(정수만)
+#동일한 데이터타입의 값을 2개 이상 사용하면 무조건 벡터씀
+
+season <- c("봄", "여름", "가을", "겨울")
+season
+
+mean(vec)
+max(vec)
+min(vec)
+
+no <- 1:4
+name <- c('Apple', 'Peach', 'Banana', 'Grape')
+price <- c(500, 200, 100, 50)
+qty <- c(5, 2, 4, 7)
+#R은 소문자로 쓰기
+
+df_fruits <- data.frame(no, name, price, qty)
+
+df_fruits$name
+#Level이 있는 벡터 : fector : 특정 범위를 벗어나지 않는 벡터, 범주형 벡터, 순서를 줄수 있음
+
+
+list.files()
+df_fruits <- read.csv("fruit.csv", header = F)
+df_fruits
+
+colnames(df_fruits) <- c("no", "name", "price", "qty")
+df_fruits
+
+df_kia <- read.csv("기아타이거즈연봉.csv")
+head(df_kia, 10)
+tail(df_kia, 3)
+
+dim(df_kia)
+
+str(df_kia) #다 범주형 데이터(fector)로 인식
+
+summary(df_kia)
+
+install.packages("wordcloud")
+library(wordcloud)
+
+
+word <- c("남구", "서구", "북구", "광산구", "동구")
+fre <- c(4, 24, 64, 8, 4)
+
+wordcloud(word, fre, colors = pal, scale = c(3, 1), 
+          rot.per = 0, random.order = F)
+#팔레트 제공 패키지
+install.packages("RColorBrewer")
+library(RColorBrewer)
+
+display.brewer.all()
+
+pal <- brewer.pal(5, "Dark2")
+pal
+
+kia_word <- df_kia$선수명
+kia_fre <- df_kia$연봉
+
+wordcloud(kia_word, kia_fre, colors = pal, scale = c(5, 1), 
+          rot.per = 0, random.order = F)
+
+#한글 명사 추출 패키지, 완벽하진 않음
+
+#데이터 불러오기
+list.files()
+text <- readLines("대통령북한연설.txt")
+text
+
+#명사추출
+install.packages("KoNLP")
+
+
+#벡터로 변환
+
+
+#
+
+
